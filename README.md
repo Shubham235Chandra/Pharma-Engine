@@ -1,4 +1,4 @@
-# Pharma Engine - Transforming Medicine Information
+# Pharma Engine
 
 ## Transforming Medicine Information Management
 
