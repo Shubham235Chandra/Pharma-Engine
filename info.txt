@@ -1,0 +1,51 @@
+# Data Transformation Process Readme
+
+## Data Source
+The original data was sourced from a CSV file named 'medicine_data.csv'. This file contained comprehensive information about various medicines, including attributes such as product name, manufacturer, price, salt composition, medicine description, side effects, and drug interactions.
+
+## Data Transformation Process
+
+### 1. Data Preprocessing - medicine.ipynb
+   - The 'medicine_data.csv' file was loaded into a Pandas DataFrame.
+   - The 'salt_composition' column was transformed by splitting its contents into a list of salt components. This step involved using the '+' character as a delimiter.
+   - Empty cells within the dataset were handled by replacing them with empty strings to ensure consistent data formatting.
+
+### 2. Creating Categorical Codes - medicine.ipynb
+   - To optimize storage and improve query efficiency, categorical codes were assigned to specific attributes. This was done for:
+     - Manufacturer: A 'manufacturer_id' was assigned to each unique manufacturer name, and this mapping was stored for reference.
+     - Product Name: A 'product_id' was assigned to each unique product name, and this mapping was stored for reference.
+     - Sub-category: A 'sub_category_id' was assigned to each unique sub-category, and this mapping was stored for reference.
+     - Salt Composition: A 'salt_id' was assigned to each unique salt composition, and this mapping was stored for reference.
+
+### 3. Creating New DataFrames - new_medicine.ipynb
+   - Several new DataFrames were generated to represent different aspects of the data:
+     - *Manufacturer Table:* This table contains 'manufacturer_id' and 'product_manufactured', representing manufacturer details.
+     - *Medicine Details Table:* It includes 'product_id', 'medicine_desc', and 'side_effects' columns, capturing additional information about each medicine.
+     - *Basic Product Info Table:* This table comprises 'product_id', 'sub_category_id', 'manufacturer_id', 'product_name', and 'product_price', offering essential details about each product.
+     - *Subcategory Table:* This table contains 'sub_category_id' and 'sub_category' columns, describing sub-category information.
+     - *Salt Composition Table:* This table includes 'salt_id' and 'salt_composition', providing details about salt compositions.
+     - *Product Salt Composition Table:* This table establishes the relationship between products and their salt compositions using 'product_id' and 'salt_id'.
+     - *Drug Interactions Table:* It contains information about drug interactions, with 'interaction_id' assigned to each unique interaction.
+     - *Product Drug Interactions Table:* This table links products to their associated drug interactions, using 'product_id' and 'interaction_id'.
+
+### 4. SQLite Database Creation - read.ipynb
+   - The newly created DataFrames were exported to an SQLite database named 'new_medicine_full.db'. Each DataFrame corresponds to a separate table in this database.
+
+### 5. SQL Dump File 
+   - An SQL dump file named 'new_medicine_full.sql' was generated from the SQLite database. This file contains SQL commands to recreate the database structure and insert the data.
+
+### 6. PostgreSQL Database Import
+   - The SQL dump file 'new_medicine_full.sql' was imported into a PostgreSQL database named 'medicine_database_work'. The database was hosted locally on 'localhost' with port '5432'. The following connection parameters were used:
+     - Database Name: medicine_database_work
+     - Username: postgres
+     - Password: 123456
+     - Host: localhost
+     - Port: 5432
+
+## Usage
+You can access and query the transformed data in the PostgreSQL database named 'medicine_database_work'. The data has been structured into separate tables for various entities, allowing for efficient data retrieval and analysis.
+
+If you need to recreate the database from scratch, you can use the 'new_medicine_full.sql' file to do so. Ensure you have PostgreSQL installed and running, and specify UTF-8 encoding when reading the SQL file.
+
+## Additional Information
+Please refer to the provided Python code for the specific details of the data transformation process. If you encounter any issues or have further questions, feel free to contact the data administrator.
