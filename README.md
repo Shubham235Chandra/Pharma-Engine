@@ -1,48 +1,48 @@
-# Pharma Engine
+# Pharma Engine: A Revolutionary Medicine Information Management System
 
-## Transforming Medicine Information Management
+## Overview
+Pharma Engine is a cutting-edge database system meticulously crafted to streamline the management of pharmaceutical inventories with unparalleled efficiency and precision. In an era where the pharmaceutical industry is marked by rapid growth and evolving challenges, Pharma Engine emerges as a pivotal solution, adept at navigating the complexities of medicine information, including but not limited to, chemical compositions, side effects, drug interactions, and manufacturer details.
 
-### Introduction
-Pharma Engine is a comprehensive database system designed to revolutionize the way pharmaceutical inventories are managed. As the pharmaceutical industry expands, the complexity and volume of data concerning medicine information grow exponentially. Pharma Engine addresses these challenges by providing a robust, scalable, and efficient solution for managing intricate details of medicines including chemical compositions, side effects, drug interactions, and more.
+## Motivation
+The ever-expanding scope of pharmaceutical inventories introduces a multifaceted array of challenges, predominantly in managing detailed drug information and ensuring swift, accurate access to data. Conventional tools, such as Excel spreadsheets, no longer suffice due to their limitations in handling large datasets, complex queries, and multi-user access. Pharma Engine leverages advanced database technologies to overcome these obstacles, providing a robust, scalable, and secure platform for pharmaceutical data management.
 
-### Problem Statement
-Managing a large and diverse pharmaceutical inventory poses significant challenges, especially when it comes to handling complex details like drug interactions and manufacturer information. Traditional tools like Excel spreadsheets fall short in ensuring data accuracy and quick access, leading to the need for a more sophisticated management system.
+## Why Choose Pharma Engine?
+Pharma Engine transcends traditional management systems by offering:
+- **Scalability:** Seamlessly accommodates growing data volumes without sacrificing performance.
+- **Concurrent Access:** Ensures multiple users can access and modify data simultaneously without conflicts.
+- **Complex Queries Support:** Facilitates sophisticated data analysis with comprehensive SQL query support.
+- **Advanced Security:** Implements stringent security measures to safeguard sensitive information.
 
-### Our Solution: Why Database Over Excel?
-Pharma Engine leverages the power of databases to offer scalability, concurrent access, complex query handling, and enhanced security features, far surpassing the capabilities of conventional management tools. Our system is designed to efficiently handle large volumes of data, ensuring data integrity and providing real-time access to vital information.
+## Ideal For
+Pharma Engine is designed to cater to a diverse spectrum of users within the healthcare and pharmaceutical sectors, including but not limited to:
+- **Pharmacists:** For efficient drug information lookup and stock management.
+- **Inventory Managers:** To oversee stock levels, update pricing, and generate comprehensive reports.
+- **Medical Practitioners:** To access detailed drug interaction and composition data.
+- **Database Administrators:** For maintaining database integrity, performing backups, and ensuring seamless data access.
 
-### Key Features
-- **Data Scalability:** Supports growing inventories without compromising on performance.
-- **Concurrent Access:** Allows multiple users to work simultaneously without data conflicts.
-- **Complex Queries:** Enables advanced data analysis and management capabilities.
-- **Enhanced Security:** Protects sensitive information with advanced security protocols.
+## Project Components
+Pharma Engine encompasses a variety of components, each tailored to specific aspects of pharmaceutical data management:
+- **Data Transformation & Normalization:** Streamlines the preparation of raw data for database integration.
+- **Database Schema Design:** A meticulously crafted schema to ensure efficient data organization and retrieval.
+- **User Interface:** A user-friendly interface that enables intuitive interaction with the database for querying and data analysis.
 
-### Target Users
-Pharma Engine serves a wide range of users including pharmacists, inventory managers, medical practitioners, and database administrators, streamlining operations and improving patient care across the healthcare and pharmaceutical sectors.
+## Getting Started
+### Prerequisites
+- Install Python 3.x, PostgreSQL, and Jupyter Notebook on your machine.
 
-### Project Structure
-- **Data Transformation Process:** Documented steps for preprocessing, creating categorical codes, and generating new DataFrames.
-- **Database Creation:** Utilization of SQLite for development and PostgreSQL for production environments.
-- **User Interface:** Pharma Engine includes a user-friendly interface for seamless interaction with the database.
+### Setup Instructions
+1. **Clone the Pharma Engine repository** to your local machine.
+2. **Install the necessary dependencies** using `pip install -r requirements.txt`.
+3. **Database Configuration:**
+   - Import the provided SQL dump file into PostgreSQL.
+   - Adjust the database connection settings to match your setup.
 
-### Getting Started
-1. **Prerequisites:**
-   - Python 3.x
-   - PostgreSQL
-   - Jupyter Notebook
-2. **Installation:**
-   - Clone the Pharma Engine repository.
-   - Install the required Python libraries: `pip install -r requirements.txt`.
-3. **Setting Up the Database:**
-   - Import the SQL dump file into your PostgreSQL instance.
-   - Adjust the database connection settings as per your environment.
+### Dataset
+The project utilizes a comprehensive dataset available on Kaggle, which can be found [here](https://www.kaggle.com/datasets/mohneesh7/indian-medicine-data/data). This dataset forms the foundation of Pharma Engine, enabling the rich, detailed management of medicine information.
 
-### Usage
-Pharma Engine is equipped with various Jupyter Notebooks demonstrating the data transformation process and interactions with the database. Explore the notebooks to understand the workflow and how to perform queries on the database.
+## How to Contribute
+Pharma Engine thrives on community contributions. Whether you're interested in fixing bugs, adding new features, or improving the documentation, we welcome your involvement. Please fork the repository, commit your changes, and submit a pull request.
 
-### Contributing
-We welcome contributions from the community. If you're interested in improving Pharma Engine or adding new features, please feel free to fork the repository, make changes, and submit a pull request.
-
-### Contact
-For further inquiries or support, please contact us at:
+## Contact Us
+For questions, support, or collaboration inquiries, feel free to reach out to us at:
 - Shubham Chandra - sc366@buffalo.edu
